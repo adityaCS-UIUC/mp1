@@ -1,13 +1,506 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Yentha helps organizations uncover overlapping AI subscriptions, reclaim unused seats, and take control of software renewals.">
+    <meta name="theme-color" content="#07110f">
+    <title>Yentha Platform | AI Subscription Intelligence</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+    <header class="site-header" id="top">
+      <nav class="navbar" aria-label="Primary navigation">
+        <div class="navbar__inner">
+          <a class="navbar__brand" href="#hero" aria-label="Yentha AI by Aditya home">
+            <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+            <span>Yentha AI by Aditya</span>
+          </a>
+
+          <button class="navbar__menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="navbar__menu" id="primary-menu">
+            <ul class="navbar__links">
+              <li><a class="navbar__link active" href="#hero">Overview</a></li>
+              <li><a class="navbar__link" href="#governance">Governance</a></li>
+              <li><a class="navbar__link" href="#features">Capabilities</a></li>
+              <li><a class="navbar__link" href="#overlap-carousel">Overlap Map</a></li>
+              <li><a class="navbar__link" href="#modals">Resources</a></li>
+              <li><a class="navbar__link" href="#footer">Connect</a></li>
+            </ul>
+            <a class="button button--small button--accent" href="#features">Manage Tools</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="hero" aria-labelledby="hero-title">
+        <div class="hero__inner container">
+          <div class="hero__content">
+            <p class="eyebrow">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              AI tool governance for modern teams
+            </p>
+            <h1 id="hero-title">Stop Paying Twice for the Same AI Tools</h1>
+            <p class="hero__subtitle">
+              Yentha gives teams one place to review AI tool requests, manage approvals,
+              assign ownership, and keep every approved tool organized throughout its
+              lifecycle.
+            </p>
+            <div class="hero__actions">
+              <button class="button button--ghost modal-trigger" type="button" data-modal-target="demo-video-modal">
+                <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+                See Yentha in Action
+              </button>
+            </div>
+            <ul class="hero__proof" aria-label="Platform trust highlights">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Read-only discovery</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> SSO-ready</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Exportable recommendations</li>
+            </ul>
+          </div>
+
+          <section class="hero-demo" id="demo-video" aria-labelledby="demo-title">
+            <div class="hero-demo__heading">
+              <p class="eyebrow">A living view of every subscription</p>
+              <h2 id="demo-title">See Yentha in action.</h2>
+            </div>
+            <figure class="video-frame hero-demo__video">
+              <video
+                controls
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/bg_scroll.png"
+                aria-label="Yentha AI subscription intelligence dashboard demonstration"
+              >
+                <source src="assets/main_demo.mp4" type="video/mp4">
+                <p>
+                  Your browser does not support HTML5 video. Continue to the
+                  <a href="#modals">workspace comparison</a> for a guided overview.
+                </p>
+              </video>
+              <figcaption>
+                Follow approvals, ownership, tool status, and upcoming reviews from one shared workspace.
+              </figcaption>
+            </figure>
+          </section>
+        </div>
+      </section>
+
+      <section class="governance-preview section" id="governance" aria-labelledby="governance-preview-title">
+        <div class="container governance-preview__inner">
+          <div class="governance-preview__content">
+            <p class="eyebrow">From request to responsible use</p>
+            <h2 id="governance-preview-title">Give every AI tool a clear decision trail.</h2>
+            <p>
+              Bring requests, reviewers, owners, policies, and lifecycle checks together
+              so the team always knows what is approved and what needs attention.
+            </p>
+          </div>
+
+          <div class="governance-preview__widget audit-widget-wrap">
+            <article class="terminal audit-widget" aria-labelledby="governance-card-title">
+              <header class="terminal__bar audit-widget__bar">
+                <span class="terminal__dot terminal__dot--red"></span>
+                <span class="terminal__dot terminal__dot--yellow"></span>
+                <span class="terminal__dot terminal__dot--green"></span>
+                <span class="terminal__title">Tool governance · live</span>
+              </header>
+
+              <div class="terminal__body audit-widget__body">
+                <div class="audit-widget__heading">
+                  <div>
+                    <p class="audit-widget__label">Managed AI workspace</p>
+                    <h2 id="governance-card-title">24 tools managed</h2>
+                  </div>
+                  <span class="audit-widget__change">
+                    <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                    6 pending
+                  </span>
+                </div>
+
+                <div class="audit-widget__meter" aria-label="Policy coverage is 86 percent complete">
+                  <div class="audit-widget__meter-label">
+                    <span>Policy coverage</span>
+                    <strong>86%</strong>
+                  </div>
+                  <progress value="86" max="100">86%</progress>
+                </div>
+
+                <ul class="audit-widget__findings" aria-label="Tool governance summary">
+                  <li>
+                    <span class="audit-widget__icon"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i></span>
+                    <span><strong>6 approval requests</strong><small>Ready for owner and security review</small></span>
+                    <span class="audit-widget__value">Pending</span>
+                  </li>
+                  <li>
+                    <span class="audit-widget__icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+                    <span><strong>24 approved tools</strong><small>Owners, policies, and status in one catalog</small></span>
+                    <span class="audit-widget__value">Managed</span>
+                  </li>
+                  <li>
+                    <span class="audit-widget__icon"><i class="fa-solid fa-calendar-day" aria-hidden="true"></i></span>
+                    <span><strong>3 reviews approaching</strong><small>Renewal and policy checks due soon</small></span>
+                    <span class="audit-widget__value">Upcoming</span>
+                  </li>
+                </ul>
+
+                <button class="button button--accent audit-widget__scan modal-trigger" type="button" data-modal-target="approval-help-modal">
+                  <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+                  Review Tool Approvals
+                </button>
+                <p class="audit-widget__updated" aria-live="polite">Workspace synced today at 9:42 AM</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="features section" id="features" aria-labelledby="features-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">See the complete AI stack</p>
+            <h2 id="features-title">Turn scattered subscriptions into clear decisions.</h2>
+            <p>
+              Yentha connects spend, usage, capabilities, and contract timing to reveal
+              where your AI portfolio delivers value, and where it quietly drains budget.
+            </p>
+          </div>
+
+          <div class="features__grid">
+            <article class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">
+                <i class="fa-solid fa-object-group"></i>
+              </div>
+              <h3>Feature Overlap Detection</h3>
+              <p>
+                Compare tools by real capabilities, not marketing categories, to expose
+                duplicate assistants, image generators, meeting tools, and coding agents.
+              </p>
+              <span class="feature-card__metric">Capability-level matching</span>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">
+                <i class="fa-solid fa-users-viewfinder"></i>
+              </div>
+              <h3>Seat Utilization Tracking</h3>
+              <p>
+                Identify inactive licenses, adoption gaps, and teams with mismatched plans
+                using privacy-conscious activity signals and configurable thresholds.
+              </p>
+              <span class="feature-card__metric">Usage tied to spend</span>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">
+                <i class="fa-solid fa-bell"></i>
+              </div>
+              <h3>Automated Renewal Alerts</h3>
+              <p>
+                Get timely renewal windows, ownership reminders, and negotiation briefs
+                before another annual contract silently rolls over.
+              </p>
+              <span class="feature-card__metric">No surprise renewals</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="code-carousel overlap-carousel section" id="overlap-carousel" aria-labelledby="overlap-title">
+        <div class="container">
+          <div class="section-heading section-heading--light">
+            <p class="eyebrow">Overlap intelligence</p>
+            <h2 id="overlap-title">Find the redundancy hiding in plain sight.</h2>
+            <p>
+              Compare popular tools across capability coverage, adoption, ownership, and
+              effective cost before consolidating your stack.
+            </p>
+          </div>
+
+          <div class="carousel" aria-roledescription="carousel" aria-label="AI tool overlap comparisons">
+            <button class="carousel__control carousel__control--previous carousel-prev" type="button" aria-label="Show previous comparison">
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+
+            <div class="carousel__viewport">
+              <div class="carousel__track">
+                <article class="carousel__slide active" data-slide-index="0" aria-label="1 of 3">
+                  <div class="code-card comparison-card">
+                    <header class="code-card__header">
+                      <div><span class="code-card__language">Large language models</span><h3>ChatGPT vs Claude Enterprise</h3></div>
+                      <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                    </header>
+                    <div class="comparison-card__body">
+                      <div class="comparison-card__tool">
+                        <span class="comparison-card__initials">CG</span>
+                        <div><strong>ChatGPT Enterprise</strong><small>128 purchased · 91 active</small></div>
+                        <span class="comparison-card__status">Approved</span>
+                      </div>
+                      <div class="comparison-card__versus" aria-hidden="true">VS</div>
+                      <div class="comparison-card__tool">
+                        <span class="comparison-card__initials">CL</span>
+                        <div><strong>Claude Enterprise</strong><small>84 purchased · 39 active</small></div>
+                        <span class="comparison-card__status">Review due</span>
+                      </div>
+                      <div class="comparison-card__result">
+                        <span><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> 78% feature overlap</span>
+                        <strong>Action: Review both tools before renewal</strong>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="carousel__slide" data-slide-index="1" aria-label="2 of 3" aria-hidden="true">
+                  <div class="code-card comparison-card">
+                    <header class="code-card__header">
+                      <div><span class="code-card__language">Generative design</span><h3>Midjourney vs Canva AI</h3></div>
+                      <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                    </header>
+                    <div class="comparison-card__body">
+                      <div class="comparison-card__tool">
+                        <span class="comparison-card__initials">MJ</span>
+                        <div><strong>Midjourney Teams</strong><small>52 purchased · 28 active</small></div>
+                        <span class="comparison-card__status">Limited use</span>
+                      </div>
+                      <div class="comparison-card__versus" aria-hidden="true">VS</div>
+                      <div class="comparison-card__tool">
+                        <span class="comparison-card__initials">CA</span>
+                        <div><strong>Canva AI Suite</strong><small>140 purchased · 112 active</small></div>
+                        <span class="comparison-card__status">Approved</span>
+                      </div>
+                      <div class="comparison-card__result">
+                        <span><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> 64% feature overlap</span>
+                        <strong>Action: Confirm which teams need both tools</strong>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="carousel__slide" data-slide-index="2" aria-label="3 of 3" aria-hidden="true">
+                  <div class="code-card comparison-card">
+                    <header class="code-card__header">
+                      <div><span class="code-card__language">Code assistants</span><h3>Copilot vs Cursor</h3></div>
+                      <i class="fa-solid fa-code" aria-hidden="true"></i>
+                    </header>
+                    <div class="comparison-card__body">
+                      <div class="comparison-card__tool">
+                        <span class="comparison-card__initials">GH</span>
+                        <div><strong>GitHub Copilot</strong><small>210 purchased · 174 active</small></div>
+                        <span class="comparison-card__status">Approved</span>
+                      </div>
+                      <div class="comparison-card__versus" aria-hidden="true">VS</div>
+                      <div class="comparison-card__tool">
+                        <span class="comparison-card__initials">CU</span>
+                        <div><strong>Cursor Business</strong><small>96 purchased · 71 active</small></div>
+                        <span class="comparison-card__status">Pending review</span>
+                      </div>
+                      <div class="comparison-card__result">
+                        <span><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> 82% feature overlap</span>
+                        <strong>Action: Assign an owner before approval</strong>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <button class="carousel__control carousel__control--next carousel-next" type="button" aria-label="Show next comparison">
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+
+            <div class="carousel__status" aria-label="Choose a tool comparison">
+              <button class="carousel__dot active" type="button" data-slide-to="0" aria-label="Show LLM comparison" aria-current="true"></button>
+              <button class="carousel__dot" type="button" data-slide-to="1" aria-label="Show generative design comparison"></button>
+              <button class="carousel__dot" type="button" data-slide-to="2" aria-label="Show code assistant comparison"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="resources section" id="modals" aria-labelledby="resources-title">
+        <div class="container resources__inner">
+          <div class="resources__content">
+            <p class="eyebrow">One platform, two ways to work</p>
+            <h2 id="resources-title">Compare the workspace that fits you.</h2>
+            <p>
+              Start with personal clarity or give an entire team a shared system for
+              requests, approvals, ownership, and ongoing tool management.
+            </p>
+          </div>
+          <div class="plan-comparison" role="table" aria-label="Individual and Team Plan comparison">
+            <div class="plan-comparison__row plan-comparison__row--header" role="row">
+              <div class="plan-comparison__label" role="columnheader">Plan comparison</div>
+              <div class="plan-comparison__plan" role="columnheader">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <span>Individual</span>
+              </div>
+              <div class="plan-comparison__plan plan-comparison__plan--featured" role="columnheader">
+                <i class="fa-solid fa-users" aria-hidden="true"></i>
+                <span>Team</span>
+              </div>
+            </div>
+            <div class="plan-comparison__row" role="row">
+              <div class="plan-comparison__label" role="rowheader">Designed for</div>
+              <div class="plan-comparison__value" role="cell" data-plan="Individual">One person managing a personal AI toolkit</div>
+              <div class="plan-comparison__value" role="cell" data-plan="Team">Teams coordinating tools across shared work</div>
+            </div>
+            <div class="plan-comparison__row" role="row">
+              <div class="plan-comparison__label" role="rowheader">Tool catalog</div>
+              <div class="plan-comparison__value" role="cell" data-plan="Individual"><i class="fa-solid fa-check" aria-hidden="true"></i> Personal inventory and status</div>
+              <div class="plan-comparison__value" role="cell" data-plan="Team"><i class="fa-solid fa-check" aria-hidden="true"></i> Shared catalog with team visibility</div>
+            </div>
+            <div class="plan-comparison__row" role="row">
+              <div class="plan-comparison__label" role="rowheader">Approvals</div>
+              <div class="plan-comparison__value" role="cell" data-plan="Individual"><i class="fa-solid fa-check" aria-hidden="true"></i> Self-managed review decisions</div>
+              <div class="plan-comparison__value" role="cell" data-plan="Team"><i class="fa-solid fa-check" aria-hidden="true"></i> Business, IT, and security workflows</div>
+            </div>
+            <div class="plan-comparison__row" role="row">
+              <div class="plan-comparison__label" role="rowheader">Ownership</div>
+              <div class="plan-comparison__value" role="cell" data-plan="Individual"><i class="fa-solid fa-check" aria-hidden="true"></i> Personal reminders and lifecycle status</div>
+              <div class="plan-comparison__value" role="cell" data-plan="Team"><i class="fa-solid fa-check" aria-hidden="true"></i> Assigned owners, policies, and reviews</div>
+            </div>
+            <div class="plan-comparison__row" role="row">
+              <div class="plan-comparison__label" role="rowheader">Overlap insight</div>
+              <div class="plan-comparison__value" role="cell" data-plan="Individual"><i class="fa-solid fa-check" aria-hidden="true"></i> Compare tools in your own stack</div>
+              <div class="plan-comparison__value" role="cell" data-plan="Team"><i class="fa-solid fa-check" aria-hidden="true"></i> Compare capabilities across the organization</div>
+            </div>
+          </div>
+          <div class="resources__actions">
+            <button class="button button--accent modal-trigger" type="button" data-modal-target="platform-problem-modal">
+              <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
+              See the Problem Yentha Solves
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal is-hidden" id="demo-video-modal" role="dialog" aria-modal="true" aria-labelledby="demo-video-modal-title" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__window modal__window--video" role="document">
+        <button class="modal__close" type="button" aria-label="Close Yentha demonstration" data-modal-close>
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <div class="modal__video-heading">
+          <p class="eyebrow">Yentha platform demonstration</p>
+          <h2 id="demo-video-modal-title">See the complete workspace in action.</h2>
+          <p>Follow tool approvals, ownership, subscription status, and upcoming reviews from one shared view.</p>
+        </div>
+        <figure class="video-frame modal__video-frame">
+          <video
+            controls
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="assets/bg_scroll.png"
+            aria-label="Expanded Yentha AI subscription intelligence dashboard demonstration"
+            data-modal-video
+          >
+            <source src="assets/main_demo.mp4" type="video/mp4">
+            <p>Your browser does not support HTML5 video.</p>
+          </video>
+          <figcaption>
+            A larger view of Yentha's shared AI tool governance workspace.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="modal is-hidden" id="approval-help-modal" role="dialog" aria-modal="true" aria-labelledby="approval-help-title" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__window modal__window--compact" role="document">
+        <button class="modal__close" type="button" aria-label="Close approval workflow overview" data-modal-close>
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <div class="modal__feature-icon" aria-hidden="true">
+          <i class="fa-solid fa-clipboard-check"></i>
+        </div>
+        <p class="eyebrow">Approval workflows</p>
+        <h2 id="approval-help-title">Make every tool decision clear.</h2>
+        <p>
+          Yentha gives employees a simple place to request an AI tool and gives reviewers
+          the context they need to approve, reject, or request more information.
+        </p>
+        <ul class="modal__list modal__list--benefits">
+          <li><strong>Consistent intake:</strong> Collect purpose, owner, data needs, and business justification with every request.</li>
+          <li><strong>Faster reviews:</strong> Route each tool to the right business, IT, and security reviewers.</li>
+          <li><strong>Clear history:</strong> Keep decisions and reviewer notes together for future audits and renewals.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal is-hidden" id="platform-problem-modal" role="dialog" aria-modal="true" aria-labelledby="platform-problem-title" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__window" role="document">
+        <button class="modal__close" type="button" aria-label="Close the problem Yentha solves" data-modal-close>
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <div class="modal__feature-icon" aria-hidden="true">
+          <i class="fa-solid fa-puzzle-piece"></i>
+        </div>
+        <p class="eyebrow">The problem Yentha solves</p>
+        <h2 id="platform-problem-title">AI tools are easy to adopt, but difficult to govern.</h2>
+        <p>
+          New AI tools often enter a workspace faster than teams can document them.
+          The result is a scattered portfolio with unclear ownership, inconsistent
+          approvals, and several products solving similar problems.
+        </p>
+        <ul class="modal__list modal__list--benefits">
+          <li><strong>Fragmented visibility:</strong> Tool information lives across receipts, browser tabs, spreadsheets, and team conversations.</li>
+          <li><strong>Repeated capabilities:</strong> Different products may cover the same writing, design, research, or coding needs.</li>
+          <li><strong>Unclear accountability:</strong> Without owners and review dates, approvals and lifecycle decisions are easy to lose.</li>
+        </ul>
+        <p class="modal__plan-fit"><strong>Yentha's role:</strong> Bring tools, capabilities, approvals, owners, and review dates into one understandable workspace.</p>
+      </div>
+    </div>
+
+    <footer class="site-footer section" id="footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="navbar__brand" href="#hero" aria-label="Yentha AI by Aditya home">
+            <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+            <span>Yentha AI by Aditya</span>
+          </a>
+          <p>AI portfolio clarity for teams that build responsibly.</p>
+        </div>
+
+        <nav class="social-links" aria-label="Social media links">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="Yentha AI by Aditya on GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Yentha AI by Aditya on Twitter / X">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Yentha AI by Aditya on LinkedIn">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+        </nav>
+
+        <p class="site-footer__copyright">&copy; 2026 Yentha Platform. All rights reserved.</p>
+
+        <a class="back-to-top" href="#hero">
+          <span>Back to top</span>
+          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
