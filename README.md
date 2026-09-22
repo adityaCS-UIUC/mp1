@@ -8,6 +8,8 @@
 4. [Getting Started](#getting-started)
 5. [Submission Details](#submission-details)
 6. [Large Language Model Usage Policy](#large-language-model-usage-policy)
+7. [Project Context](#project-context)
+8. [Sources and Attribution](#sources-and-attribution)
 
 ## Assignment
 
@@ -103,3 +105,15 @@ We acknowledge the transformative potential of Large Language Models (LLM) in ge
 
 As part of this class, we *do* encourage students to experiment with LLM services such as OpenAI's ChatGPT to generate source code for MPs. If LLMs are used to generate code for an MP, students *must* (1) submit their chatlogs along with their source code, and (2) answer survey questions related to their experience using LLMs in the grading form. Failure to do this will be a violation of the academic integrity policy of this course.
 
+## Project Context
+
+Yentha AI is an AI tool and subscription management platform designed and developed by Aditya Prasath Ravilla. I selected my existing platform as the subject of this CS 409 MP1 assignment.
+
+The landing page implementation in this repository was created specifically for the assignment using HTML5, SCSS, and vanilla JavaScript. Yentha's product concept, branding, dashboard interface, background imagery, and demonstration footage are my original work.
+
+## Sources and Attribution
+
+- Yentha AI product concept, branding, interface, images, and demonstration video: Original work by Aditya Prasath Ravilla.
+- FontAwesome: Used for scalable interface and social media icons.
+- Google Fonts: Inter and Fira Code.
+- OpenAI Codex: Used as an AI development assistant. The required conversation record is provided in `llm_logs.csv`.
