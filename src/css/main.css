@@ -1627,6 +1627,22 @@ pre {
     justify-self: center;
   }
 
+  .governance-preview {
+    min-height: auto;
+  }
+  .governance-preview__inner {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+  }
+  .governance-preview__content {
+    max-width: 620px;
+    margin-inline: auto;
+    text-align: center;
+  }
+  .governance-preview__widget {
+    width: 100%;
+  }
+
   .terminal {
     animation: none;
   }
@@ -1719,6 +1735,16 @@ pre {
   .hero__proof {
     flex-direction: column;
     align-items: center;
+  }
+
+  .governance-preview {
+    padding-block: 4.5rem;
+  }
+  .governance-preview__inner {
+    gap: 2rem;
+  }
+  .governance-preview__content > p:last-child {
+    font-size: 1rem;
   }
 
   .terminal__title {
@@ -1848,11 +1874,15 @@ pre {
   }
 
   .audit-widget__body {
+    padding: 1rem;
     overflow-x: visible;
     white-space: normal;
   }
   .audit-widget__heading {
     flex-direction: column;
+  }
+  .audit-widget__heading h2 {
+    font-size: clamp(1.65rem, 8vw, 2.1rem);
   }
   .audit-widget__findings li {
     grid-template-columns: 36px minmax(0, 1fr);

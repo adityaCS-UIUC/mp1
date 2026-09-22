@@ -1940,6 +1940,25 @@ pre {
     justify-self: center;
   }
 
+  .governance-preview {
+    min-height: auto;
+
+    &__inner {
+      grid-template-columns: 1fr;
+      gap: 2.75rem;
+    }
+
+    &__content {
+      max-width: 620px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    &__widget {
+      width: 100%;
+    }
+  }
+
   .terminal {
     animation: none;
   }
@@ -2052,6 +2071,18 @@ pre {
     &__proof {
       flex-direction: column;
       align-items: center;
+    }
+  }
+
+  .governance-preview {
+    padding-block: 4.5rem;
+
+    &__inner {
+      gap: 2rem;
+    }
+
+    &__content > p:last-child {
+      font-size: 1rem;
     }
   }
 
@@ -2211,12 +2242,17 @@ pre {
 
   .audit-widget {
     &__body {
+      padding: 1rem;
       overflow-x: visible;
       white-space: normal;
     }
 
     &__heading {
       flex-direction: column;
+
+      h2 {
+        font-size: clamp(1.65rem, 8vw, 2.1rem);
+      }
     }
 
     &__findings li {
